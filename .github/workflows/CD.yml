@@ -29,4 +29,14 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: 
-          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\retrieve_dependency.ps1 C:\Deployment CDExecution
+          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\retrieve_dependency.ps1 C:\Deployment CD
+      
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: 
+          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\Deploy_msi.ps1 C:\Deployment CD ServiceHubSystemAutomationTestSuite
+
+     # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: 
+          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\test_execution.ps1 C:\Deployment CDExecution C:\CD_Logging dir
