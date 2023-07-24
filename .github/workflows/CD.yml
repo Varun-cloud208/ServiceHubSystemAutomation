@@ -32,9 +32,9 @@ jobs:
           powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\retrieve_dependency.ps1 C:\Deployment CD
       
        # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: 
-          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\deploy_rpm.sh
+     # - name: Run a one-line script
+      # run: 
+       # powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\deploy_rpm.sh
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
