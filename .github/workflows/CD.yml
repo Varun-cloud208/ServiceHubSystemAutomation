@@ -44,4 +44,4 @@ jobs:
      # Runs a single command using the runners shell
       - name: Test automation script execution
         run: 
-          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\test_execution.ps1 C:\Deployment CDExecution C:\CD_Logging dir
+          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\test_execution.ps1 C:\Deployment CD ServiceHubSystemAutomationTestSuite C:\CD_Logging dir
