@@ -27,19 +27,14 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      #- name: Run a one-line script
-       # run: 
-        #  powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\retrieve_dependency.ps1 C:\Deployment CD
-      
-       # Runs a single command using the runners shell
-     # - name: Run a one-line script
-      # run: 
-       # powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\deploy_rpm.sh
+      - name: Download required packages
+        run: 
+          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\retrieve_dependency.ps1 C:\Deployment CD
           
       # Runs a single command using the runners shell
-      #- name: Run a one-line script
-       # run: 
-        #  powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\Deploy_msi.ps1 C:\Deployment CD ServiceHubSystemAutomationTestSuite
+      - name: Deploy MSI
+        run: 
+          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\Deploy_msi.ps1 C:\Deployment CD ServiceHubSystemAutomationTestSuite
 
      # Runs a single command using the runners shell
       - name: Test automation script execution
