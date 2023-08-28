@@ -34,7 +34,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Deploy packages
         run: 
-          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\Deploy_msi.ps1 C:\Deployment msi ServiceHubSystemAutomationTestSuite
+          powershell.exe -executionpolicy bypass -file C:\GitHub-jobs\deploy_msi.ps1 C:\Deployment CD ServiceHubSystemAutomationTestSuite
 
      # Runs a single command using the runners shell
       - name: Test automation script execution
